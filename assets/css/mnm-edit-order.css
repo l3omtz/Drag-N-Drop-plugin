@@ -1,0 +1,5 @@
+#woocommerce-order-items .mnm_table_container td { border-bottom: none !important; }
+#woocommerce-order-items .mnm_table_container dl { font-size: 85%; }
+#woocommerce-order-items .mnm_table_item { border-bottom: none !important; }
+#woocommerce-order-items .mnm_table_item * { font-size: 12px; }
+#woocommerce-order-items .mnm_table_item td.name, #woocommerce-order-items .mnm_table_item td.thumb { padding-left: 30px; }

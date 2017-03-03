@@ -1,0 +1,28 @@
+{
+  "title": "WooCommerce Mix and Match Products",
+  "name": "woocommerce-mix-and-match-products",
+  "version": "1.1.8",
+  "description": "Group products into a custom container of a specific size",
+  "main": "Gruntfile.js",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woothemes/woocommerce-mix-and-match"
+  },
+  "bugs": {
+    "url": "https://github.com/woothemes/woocommerce-mix-and-match/issues"
+  },
+  "author": "helgatheviking",
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-newer": "~1.2.0",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "~0.5.2",
+    "jshint-stylish": "~2.2.0",
+    "load-grunt-tasks": "~3.5.0"
+  }
+}

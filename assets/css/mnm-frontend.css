@@ -1,0 +1,24 @@
+.mnm_form ul.mnm_message_content li { list-style: none; }
+
+.mnm_table { border-width: 0 0 1px 0; }
+.mnm_table th, .mnm_table td { border: 0; }
+.mnm_table .product-thumbnail, .mnm_table .product-name, .mnm_table .product-quantity, .mnm_table .container-quantity { min-width: 32px; padding: 6px 12px !important; vertical-align: top; }
+.mnm_table .mnm_item img { max-width: 300px; }
+.mnm_table .product-thumbnail, .mnm_table .product-quantity { text-align: center; }
+.mnm_table dl { font-size: 85%; }
+.mnm_table .qty { width: 3.631em; text-align: center; }
+
+.cart .mnm_table_container td, .shop_table .mnm_table_container td { border-bottom: none !important; }
+.cart .mnm_table_container dl, .shop_table .mnm_table_container dl { font-size: 85%; }
+.cart .mnm_table_item, .shop_table .mnm_table_item { border-bottom: none !important; }
+.cart .mnm_table_item td, .shop_table .mnm_table_item td { border-top: none !important; }
+.cart .mnm_table_item:not(.mnm_table_item_last) td, .shop_table .mnm_table_item:not(.mnm_table_item_last) td { border-bottom: none !important; }
+.cart .mnm_table_item .product-name, .cart .mnm_table_item .product-price, .cart .mnm_table_item .product-quantity, .shop_table .mnm_table_item .product-name, .shop_table .mnm_table_item .product-price, .shop_table .mnm_table_item .product-quantity { font-size: 85%; font-weight: normal; }
+.cart .mnm_table_item .mnm_table_item_indent, .shop_table .mnm_table_item .mnm_table_item_indent { padding-left: 32px; }
+.cart .mnm_table_item .mnm-product-name, .shop_table .mnm_table_item .mnm-product-name { margin-bottom: 10px; }
+.cart .mnm_table_item .product-quantity, .shop_table .mnm_table_item .product-quantity { text-align: center; }
+.cart .mnm_table_item .product-thumbnail img, .shop_table .mnm_table_item .product-thumbnail img { max-width: 75% !important; }
+.cart .mnm_table_item .mnm-quantity, .shop_table .mnm_table_item .mnm-quantity { font-size: 85%; }
+.cart .mnm_table_item dl.variation, .shop_table .mnm_table_item dl.variation { font-size: 100%; }
+
+.wishlist_mnm_items, .wishlist_mnm_notice { font-size: 85%; }

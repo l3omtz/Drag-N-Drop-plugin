@@ -1,0 +1,20 @@
+// Admin Orders CSS
+#woocommerce-order-items { 
+	.mnm_table_container {
+		td {
+			border-bottom: none !important;
+		}
+		dl { 
+			font-size: 85%; 
+		}
+	}
+	.mnm_table_item {
+		border-bottom: none !important;
+
+		* { font-size: 12px; }
+
+		td.name, td.thumb {
+			padding-left: 30px;
+		}
+	}
+}

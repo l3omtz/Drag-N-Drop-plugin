@@ -1,0 +1,83 @@
+*** WooCommerce Mix & Match Products Changelog ***
+
+2016.11.29 - version 1.1.8
+* Fix: "Fatal error: Function name must be a string in /includes/class-wc-mnm-cart.php on line 879"
+
+2016.09.06 - version 1.1.7
+* Fix: Container quantity validation when ordering multiple quantities of same container
+* Tweak: Add minimum attribute to admin quantity input
+
+2016.08.10 - version 1.1.6
+* Dev: Filter the product types that are allowed in a container
+* Dev: Javascript trigger for price updates
+
+2016.06.28 - version 1.1.5
+* Fix: calculate min/max price/regular_price meta for per-item priced products based on raw, unfiltered prices
+* Tweak: rename Non-Bundled Shipping to Per-Item Shipping
+
+2016.06.02 - version 1.1.4
+* Fix: Shipstation import issues due to PHP warnings in XML file.
+
+2016.04.02 - version 1.1.3
+* Fix: NaN if casting to int when qty input doesn't exist
+* Fix: unified handling of non-purchasable children (display with temporarily unavailable message)
+* Tweak: prevent total quantity from ever being higher than container limit
+
+2016.03.23 - version 1.1.2
+* Tweak: extra JS validation for sold-individually items to prevent inputs from accepting quantities higher than 1
+
+2016.03.11 - version 1.1.1
+* Fix: incorrect error message for containers
+
+201602.17 - version 1.1.0
+* Dev Feature: add filter for error quantity validation message
+* Fix: numerical agreement in error messages
+
+2015.12.16 - version 1.0.9
+ * Tweak: leave class "quantity" in place on quantiy input wrapper <div> for better compatibility with themes
+
+2015.12.08 - version 1.0.8
+ * Fix: quantity validation with no JS
+ * Tweak: better compatibility with Product Addons for per-item pricing MNM products
+
+2015.11.18 - version 1.0.7
+ * Fix: Parent containers are sold individually, if contain a product that is sold individually
+ * Dev Feature: add meta fields via hook for better extending via satellite plugins
+ * Dev Feature: add filter for container size in order item meta
+
+2015.11.09 - version 1.0.6
+* Feature - Ability to define a base price.
+* Fix - Validate quantities on update cart if container includes any items sold individually.
+* Fix - Limit quantity input max to container size.
+* Fix - MnM product prices incl/excl tax according to the 'Display Prices in the Shop' option state.
+
+2015.10.13 - version 1.0.5
+ * Feature: - Unlimited Size Containers. Set the container quantity to 0 to allow customers to purchase as many items as they want.
+ * Fix: - Cart fatal error when a MnM product in the cart is changed to another product type.
+ * Fix: - Shipstation integration.
+ * Dev: - Add filters for container and child item validation.
+
+2015.08.21 - version 1.0.4
+ * Fix - Quantity formatting in order-details templates.
+ * Fix - Ignore `is_purchasable()` for child items in container with static pricing.
+ * Tweak - better animation of WooCommerce messages.
+ * Tweak - better formatting of attribute labels.
+
+2015.07.23 - version 1.0.3
+* Fix: `get_price_suffix()` strict standards error with WC 2.4.
+* Tweak: add `woocommerce-info` class to `mnm_message` div that communicates quantity and totals required.
+* Tweak: add `cart_group` class to `form.cart` for better Product Addons support.
+
+2015.06.11 - version 1.0.2
+ * Fix: Correct template version numbers.
+ * Fix: Revised indentation of bundled items in cart/orders, etc.
+ * Fix: Improved compatibility with weight/value-based shipping methods.
+ * Fix: ShipStation compatibility.
+ * Dev Feature: When "Non-Bundled Shipping" is unchecked, allow mixed products' weights to be added to the container weight by using the 'woocommerce_mnm_item_has_bundled_weight' filter.
+ * Fix - Price Filter widget range now takes into account MnM prices correctly.
+
+2015.04.29 - version 1.0.1
+ * Fix: PHP 5.2 compatibility.
+
+ 2015.04.20 - version 1.0.0
+ * Initial Release.
