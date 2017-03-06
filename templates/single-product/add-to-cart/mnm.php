@@ -17,7 +17,7 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 ?>
-
+ 
 <?php if ( $product->has_available_children() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
