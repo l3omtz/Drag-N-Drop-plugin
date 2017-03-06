@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $product;
 ?>
 <div class="images box-container">
-	<div id="box-of-5" class="ui-draggable showbox">
+	<div id="box-of-5" class="ui-draggable showBox">
 		<div id="slot-1" class="slot empty ui-dropable">
 			<img src="http://tiktalkinteractive.com/savor/wp-content/uploads/2017/03/MacLogo_Picker.png" alt="Macaron">
 		</div>
