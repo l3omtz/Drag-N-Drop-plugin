@@ -17,12 +17,12 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 ?>
- 
+
 <?php if ( $product->has_available_children() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-	<form method="post" enctype="multipart/form-data" class="mnm_form cart cart_group">
+	<form method="post" enctype="multipart/form-data" class="mnm_form cart cart_group" id="left-pane">
 
 		<table cellspacing="0" class="mnm_table">
 			<thead>
