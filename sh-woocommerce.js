@@ -13,11 +13,15 @@ function initSelect2(){
     $j('.woocommerce-account .country_select').select2();
 }
 
+
+/* ----
+  START ON CLICK PRODUCT IMAGE FUNCTIONS
+  ----- */
+
 function initAddToCartPlusMinus(){
 
+	//  Add class to where the click should add product to cart
 	$j(document).on( 'click', '.quantity .plus, .quantity .minus, .product-thumbnail .img-plus', function() {
-
-
 
 		// Get values
 									// Find the form input value from outside it self container
@@ -51,8 +55,7 @@ function initAddToCartPlusMinus(){
 			}
 		}
 
-
-		// *** Change the image value on click *** //
+		// *** Change the value on product image click *** //
 
 		// With class .img-plus
 		if ( $j( this ).is( '.img-plus' ) ) {
@@ -62,7 +65,7 @@ function initAddToCartPlusMinus(){
 				$qty.val( max );
 			} else {
 				//  Add the quanity to the form value so it can be updated
-				// to the cart 
+				// to the cart
 				$qty.val( currentVal + parseFloat( step ) );
 				console.log($qty);
 			}
@@ -71,5 +74,46 @@ function initAddToCartPlusMinus(){
 
 		// Trigger change event
 		$qty.trigger( 'change' );
+
+	}); // END CLICK TO CART FUNCTION
+
+$j(document).on('click', "#left-pane .ui-draggable", function(){
+
+			var macaronCount = $j(".showBox .containsMac").length;
+			var totalBoxMacs = $j(".slot").length
+
+
+
+			if (macaronCount < totalBoxMacs) {
+
+				// 1 .Search through for empty basket item
+				for (var n = 1; n < 19; ++ n){
+
+				var macaron = '.showBox #slot-' + n;
+
+
+					// 2. If empty replace with clicked macaron
+					if ($j(macaron).hasClass("empty")) {
+
+						$j(macaron).children("img").remove();
+								$j(this).clone().appendTo(macaron).css({"transform":"rotate(-90deg)", "width":"100px"} );
+								$j(macaron).removeClass("empty");
+								$j(macaron).addClass("containsMac");
+
+						//Count Macarons and show add button when full
+							var totalBasketMacs = $j(".showBox .slot").length
+							var macaronsAdded = $(".showBox .containsMac").length;
+
+							if (macaronsAdded == totalBasketMacs) {
+					$j(this).MacaronPickerResults();
+							}
+
+								return false;
+							}
+				}
+			 }
 	});
+
+
+
 }
