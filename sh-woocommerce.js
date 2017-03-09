@@ -35,7 +35,13 @@ function initAddToCartPlusMinus(){
 			boxCurrentVal	= parseFloat( $boxQty.val() ),
 			boxMax			= parseFloat( $boxQty.attr( 'max' ) ),
 			boxMin			= parseFloat( $boxQty.attr( 'min' ) ),
-			boxStep		= $boxQty.attr( 'step' );
+			boxStep		= $boxQty.attr( 'step' ),
+
+			$379Qty 	= $j(this).parent().parent().parent().parent().find('.summary form .mnm_item td.mnm-379 .quantity .qty'),
+			$379CurrentVal	= parseFloat( $379Qty.val() ),
+			$379Max			= parseFloat( $379Qty.attr( 'max' ) ),
+			$379Min			= parseFloat( $379Qty.attr( 'min' ) ),
+			$379Step		= $379Qty.attr( 'step' );
 
 		// Format values
 		if ( ! currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
@@ -98,7 +104,31 @@ function initAddToCartPlusMinus(){
 				$j('<img src="http://tiktalkinteractive.com/savor/wp-content/uploads/2017/03/MacLogo_Picker.png" alt="Macaron" class="ui-droppable">').appendTo(jQuery(name));
 
 			}
-		} // End if
+		}else if( $j(this).is('.mnm-379')){
+			console.log('379 minus cicked image');
+			if ( max && ( max == currentVal || currentVal > max ) ) {
+				$qty.val( max );
+			} else if ( $379CurrentVal > 0 ) {
+				$379Qty.val( $379CurrentVal - parseFloat( step ) );
+				console.log('379 minus yes image');
+			}
+
+			// REMOVE IMAGE
+			// 1 .Fetch Class marked Draggable
+			var name = $j(this).parent('.slot')      //.find('.slot');
+
+			// 2 .Check if class exists on click
+			if(name.length != 0) {
+				console.log('removed');
+        		// 3 .Remove draggable image and replace with default
+        			$j(name).find("div").remove();
+        			$j(name).removeClass('containsMac');
+        			$j(name).addClass('empty');
+				$j('<img src="http://tiktalkinteractive.com/savor/wp-content/uploads/2017/03/MacLogo_Picker.png" alt="Macaron" class="ui-droppable">').appendTo(jQuery(name));
+
+			}
+
+		}// End if
 
 		// Trigger change event
 		$qty.trigger( 'change' );
