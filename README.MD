@@ -3,10 +3,10 @@
 Extension to MIX and Match Product 
 
 Allow customers to choose products in any combination to fill a "container" of a specific size.
-** With extension of drag and drop products to a custom container **
-*** This extension for client Savor Macaro
+With extension of drag and drop products to a custom container 
+This extension for client Savor Macaro
 
-#Description
+# Description
 
 A Drag and Drop product is a product that serves as a container for simple products or variations.
 
